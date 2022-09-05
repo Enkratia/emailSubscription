@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Subscription</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="button">
+    <button>Sign Up For My Newsletter</button>
+    <form class="hide">
+      <input type="email" placeholder="abc@example.com" id="email" required>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+
+  <script>
+    $(document).ready(function () {
+      $('button').click(function () {
+        $('form').slideDown(200);
+        $('button').css({
+          "border": "none",
+          "cursor": "default",
+          "borderBottomLeftRadius": "0",
+          "borderBottomRightRadius": "0"
+        });
+        $("form").css({
+          "borderTopLeftRadius": "0",
+          "borderTopRightRadius": "0"
+        });
+        $('#email').focus();
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-flow: row wrap;
+  padding: 0 16px;
+}
+.button{
+  width: 450px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.1),
+              0 10px 10px rgba(0,0,0,0.2);
+}
+.button button{
+  width: 100%;
+  font-size: 28px;
+  color: white;
+  padding: 15px 16px;
+  border: 1px solid #206592;
+  border-radius: 5px;
+  background: #2573a7;
+  outline: none;
+  cursor: pointer;
+}
+form{
+  display: flex;
+  flex-flow: row nowrap;
+  background: #1c567d;
+  padding: 20px;
+  border-radius: 5px;
+}
+form input{
+  border-radius: 3px;
+  outline: none;
+  padding: 12px;
+}
+form input[type="email"]{
+  flex: 1;
+  font-size: 18px;
+  border: 1px solid transparent;
+  transition: 0.4s;
+}
+form input[type="email"]:focus{
+  border: 1px solid #206592;
+}
+form input[type="submit"]{
+  color: white;
+  font-size: 17px;
+  border: 1px solid #1c567d;
+  cursor: pointer;
+  padding: 0 15px;
+  background: linear-gradient(#2980b9, #206592);
+  margin: 0 0 0 20px;
+}
+form input[type="submit"]:hover{
+  background: linear-gradient(#2e90d1, #206592);
+}
+
+@media (max-width:600px) {
+  .button form{
+    flex-flow: row wrap;
+    padding: 16px;
+  }
+  form input{
+    padding: 14px!important;
+    margin: 0px!important;
+    flex: 100%;
+  }
+  form input[type="submit"]{
+    margin-top: 14px!important;
+    font-size: 20px;
+  }
+}
+form.hide{
+  display: none;
+}
